@@ -40,4 +40,16 @@ object HelloWorld extends App {
 
   println(myVar); println(myVal); println(myVar1);
   println(myVal1);
+
+  //###### Classes & Objects ###################################
+  val pt = new Point(10, 20)
+  // Move to a new location
+  pt.move(10, 10)
+
+  val loc = new Location(10, 20, 15)
+  // Move to a new location
+  loc.move(10, 10, 5)
+  loc.move(10, 10)
+  //###########################################################
+
 }
