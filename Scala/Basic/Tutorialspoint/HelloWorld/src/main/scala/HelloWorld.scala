@@ -1,3 +1,5 @@
+import scala.language.postfixOps
+
 object HelloWorld extends App {
   // https://www.tutorialspoint.com/scala/scala_basic_syntax.htm
 
@@ -52,4 +54,17 @@ object HelloWorld extends App {
   loc.move(10, 10)
   //###########################################################
 
+  // Scala for Comprehensions
+
+  var dogBreeds = List("Doberman", "Yorkshire Terrier", "Dachshund", "Scottish Terrier", "Great Dane", "Portuguese Water Dog")
+
+  dogBreeds foreach println
+  List("Carla", "Sofia", "Roberto") foreach println
+
+  dogBreeds = List("Doberman", "Yorkshire Terrier", "Dachshund", "Scottish Terrier", "Great Dane", "Portuguese Water Dog")
+  println("\n\n--------------------------\n\n")
+  dogBreeds filter isTerrier foreach println
+  def isTerrier(breed: String) : Boolean = {
+    breed contains "Terrier"
+  }
 }
