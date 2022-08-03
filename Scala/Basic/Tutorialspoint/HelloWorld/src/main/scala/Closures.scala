@@ -11,5 +11,19 @@ object Closures extends App {
   //  multiplier(1) value = 6
   // ################
 
+  var myList1 = Array(1.9, 2.9, 3.4, 3.5)
+  var myList2 = Array(8.9, 7.9, 0.4, 1.5)
+
+  var myList3 =  Array.concat(myList1, myList2)
+
+  println(myList3.mkString("Array(", ", ", ")"))
+
+  val nums = 1 :: (2 :: (3 :: (4 :: Nil)))
+  var another = 10::nums
+
+  another.::(10)
+  println(another.::(10))
+
+  println(nums)
 
 }
