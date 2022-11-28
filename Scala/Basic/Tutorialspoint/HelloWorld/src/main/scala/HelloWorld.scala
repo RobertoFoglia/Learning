@@ -67,4 +67,7 @@ object HelloWorld extends App {
   def isTerrier(breed: String) : Boolean = {
     breed contains "Terrier"
   }
+
+
+//  (1 until 12).view()
 }
