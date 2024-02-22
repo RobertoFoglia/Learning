@@ -28,6 +28,8 @@ public class APIFunctionalInterfaces {
 //        fiAPI.function();
 //        fiAPI.unaryBinaryOperator();
     }
+
+    // @@@ Predicates   ########################
     public void predicate() {
         // Predicate<T> is a functional interface i.e. one abstract method:
         //      boolean test(T t);
@@ -40,6 +42,8 @@ public class APIFunctionalInterfaces {
         System.out.println(checkLength.test("Vatican City", 8));//false (length is 12)
 
     }
+
+    // ##########################################
 
     public void supplier() {
         // Supplier<T> is a functional interface i.e. one abstract method:
