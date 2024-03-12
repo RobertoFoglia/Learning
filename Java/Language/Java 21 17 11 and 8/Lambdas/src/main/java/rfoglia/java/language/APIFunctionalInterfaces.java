@@ -67,9 +67,11 @@ public class APIFunctionalInterfaces {
 
     // ##########################################
 
+
+    // @@@ Consumers and BiConsumer   ########################
     public void consumer() {
-        // Consumer<T> is a functional interface i.e. one abstract method:
-        //      void accept(T t)
+        //  Consumer<T> is a functional interface i.e. one abstract method:
+        //       void accept(T t)
         Consumer<String> printC = s -> System.out.println(s);// lambda
         printC.accept("To be or not to be, that is the question");
 
@@ -77,8 +79,8 @@ public class APIFunctionalInterfaces {
         names.add("John");names.add("Mary");
         names.forEach(printC);  // John, Mary
 
-        // BiConsumer<T, U> is a functional interface i.e. one abstract method:
-        //      void accept(T t, U u)
+        //  BiConsumer<T, U> is a functional interface i.e. one abstract method:
+        //       void accept(T t, U u)
         Map mapCapitalCities = new HashMap<String, String>();
         // Note: The return value of put(k,v) is just ignored (and not returned from the lambda)
         BiConsumer<String, String> biCon = (key, value) -> mapCapitalCities.put(key, value);
@@ -91,6 +93,7 @@ public class APIFunctionalInterfaces {
         mapCapitalCities.forEach(mapPrint); // Dublin is the capital of: Ireland
         // Washington D.C. is the capital of: USA
     }
+    // ##########################################
 
     public void function() {
         // Function<T, R> is a functional interface i.e. one abstract method:
