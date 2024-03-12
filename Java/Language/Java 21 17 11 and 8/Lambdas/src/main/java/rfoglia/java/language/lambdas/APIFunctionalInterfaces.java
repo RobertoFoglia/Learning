@@ -1,4 +1,4 @@
-package rfoglia.java.language;
+package rfoglia.java.language.lambdas;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
