@@ -71,13 +71,13 @@ public class MethodReference {
 
 
     }
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     public static void constructorMethodReferences(){
         // Supplier<T>     
         //      T get() 
@@ -99,16 +99,14 @@ public class MethodReference {
         ls2.add("88"); 
         System.out.println(ls2);//[88]
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+    // ## Static Method References #################
     public static void staticMethodReferences(){
         //  Static method references are considered UNBOUND also. An example static method 
         //  is Collections.sort(List)
