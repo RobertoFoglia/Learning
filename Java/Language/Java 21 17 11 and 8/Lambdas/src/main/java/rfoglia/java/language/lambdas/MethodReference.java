@@ -8,10 +8,10 @@ import java.util.function.*;
 
 public class MethodReference {
     public static void main(String[] args) {    
-//        boundMethodReferences();        // bound
-//        unboundMethodReferences();      // unbound
+        boundMethodReferences();        // bound
+        unboundMethodReferences();      // unbound
         constructorMethodReferences();  // constructor
-//        staticMethodReferences();       // static
+        staticMethodReferences();       // static
     }
 
     // ### @@@ Bound Methodd refrerences ###############
@@ -20,7 +20,7 @@ public class MethodReference {
         // Supplier<T>     
         //      T get() 
         Supplier<String> lowerL   = () -> name.toLowerCase();   // lambda
-        Supplier<String> lowerMR  = name::toLowerCase;          // method reference
+        Supplier<String> lowerMR  = name::toLowerCase;          // bound method reference
 
         // No need to say which instance to call it on - the supplier is bound to name            
         System.out.println(lowerL.get()); // mr. joe bloggs
@@ -40,20 +40,20 @@ public class MethodReference {
         System.out.println(titleMR.test("Ms."));// false
         System.out.println(titleMRB.test("Ms.", 3));// false
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+    // ### @@@ Unbound Methodd refrerences ###############
     public static void unboundMethodReferences(){
         //   Function<T, R>
         //      R apply(T)
         //          String apply(String)
         Function<String, String> upperL  = s -> s.toUpperCase();
-        Function<String, String> upperMR = String::toUpperCase; 
+        Function<String, String> upperMR = String::toUpperCase; // unbound method references
         // The function is unbound, so you need to specify which instance to call it on
         System.out.println(upperL.apply("sean"));   // SEAN
         System.out.println(upperMR.apply("sean"));  // SEAN
