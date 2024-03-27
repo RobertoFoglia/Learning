@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class MethodReference {
     public static void main(String[] args) {    
@@ -17,6 +13,8 @@ public class MethodReference {
         constructorMethodReferences();  // constructor
 //        staticMethodReferences();       // static
     }
+
+    // ### @@@ Bound Methodd refrerences ###############
     public static void boundMethodReferences(){
         String name = "Mr. Joe Bloggs";
         // Supplier<T>     
@@ -36,9 +34,11 @@ public class MethodReference {
         // This is where "context" is important.
         Predicate<String> titleL  = (title) -> name.startsWith(title);
         Predicate<String> titleMR = name::startsWith;
+        BiPredicate<String, Integer> titleMRB = name::startsWith;
 
         System.out.println(titleL.test("Mr.")); // true
         System.out.println(titleMR.test("Ms."));// false
+        System.out.println(titleMRB.test("Ms.", 3));// false
     }
     
     
